@@ -1,0 +1,5 @@
+
+nacos:
+  config:
+    server-addr: 192.168.222.21:8848
+
