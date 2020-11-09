@@ -24,9 +24,11 @@ public class HelloController {
     private boolean useLocalCache;
     @Value("${server.port}")
     private int port;
+    @Value("${application.name}")
+    private String name;
 
     @GetMapping("/get")
     public String get() {
-        return useLocalCache + ";  port is:" + port;
+        return useLocalCache + ";  port is:" + port + "; name is:" + name;
     }
 }

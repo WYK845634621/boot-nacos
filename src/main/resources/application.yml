@@ -1,5 +1,29 @@
 
 nacos:
   config:
+    bootstrap:
+      #一定设置为true
+      enable: true
     server-addr: 192.168.222.21:8848
+    #yaml文件名
+    data-id: example
+    group: DEFAULT_GROUP
+    type: yaml
+    #开启自动刷新
+    auto-refresh: true
+    config-retry-time: 3000
+    max-retry: 10
+    #    ext-config[index] 的优先级，index越小，优先级越高，从0开始
+    ext-config:
+      - auto-refresh: true
+        config-retry-time: 3000
+        data-id: common
+        enable-remote-sync-config: true
+        group: DEV_GROUP
+        max-retry: 10
+        type: yaml
+
+
+
+
 
